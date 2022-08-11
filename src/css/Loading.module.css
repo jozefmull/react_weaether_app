@@ -1,0 +1,39 @@
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.background_masker {
+  background-color: #fff;
+  position: absolute;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+.animated_background {
+  height: 100%;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(
+    to right,
+    #eeeeee 5%,
+    rgb(204, 204, 204) 15%,
+    #eeeeee 30%
+  );
+  background-size: 800px 104px;
+  position: relative;
+  opacity: 0.9;
+}

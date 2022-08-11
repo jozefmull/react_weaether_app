@@ -1,0 +1,74 @@
+.daily_item {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 40px;
+  margin: 5px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.icon_small {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.daily_item .day {
+  cursor: inherit;
+  color: #48484a;
+  flex: 1 1;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.description {
+  cursor: inherit;
+  flex: 1 1;
+  text-align: right;
+  color: #eb6e4b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.min_max {
+  color: #48484a;
+}
+
+.daily_details_grid {
+  grid-row-gap: 0;
+  grid-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  display: grid;
+  flex: 1 1;
+  grid-template-columns: auto auto;
+  padding: 5px 15px;
+  row-gap: 0;
+  margin: 10px 0px 10px 20px;
+  border-left: 2px solid #eb6e4b;
+}
+
+.daily_details_grid_item {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.daily_details_grid_item label:first-child {
+  color: #48484a;
+  margin-right: 3px;
+}
+
+.daily_details_grid_item label:last-child {
+  color: #48484a;
+}
+
+.daily_item > svg {
+  margin-left: 5px;
+}

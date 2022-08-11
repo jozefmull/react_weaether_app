@@ -1,0 +1,79 @@
+.current_weather {
+  max-width: 500px;
+  border-radius: 5px;
+  color: #48484a;
+  background-color: #fff;
+  margin: 0 auto 0 auto;
+  padding: 0px 20px 20px 20px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.top p {
+  color: #eb6e4b;
+  font-weight: 600;
+}
+.weather_desc {
+  margin: 0px;
+  margin-top: 5px;
+}
+.bottom p {
+  font-size: 36px;
+  font-weight: 100;
+  margin-right: 8pt;
+  margin: 0;
+}
+.bottom span {
+  font-weight: 700;
+  font-size: 14px;
+}
+.weather_icon {
+  width: 125px;
+}
+.details {
+  padding: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #eb6e4b;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 65px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.parameter_label {
+  text-align: left;
+  font-weight: 100 !important;
+  font-size: 12px;
+}
+.parameter_value {
+  text-align: right;
+  font-weight: 500 !important;
+  font-size: 12px;
+}
+.parameter_label.top {
+  border-bottom: 1px solid #fff;
+}
+
+.parameter_value svg {
+  width: 12px;
+  position: relative;
+  left: 2px;
+}
+@media only screen and (max-width: 430px) {
+  .weather_icon {
+    width: 75px;
+  }
+  .weather_desc {
+    margin-bottom: 15px;
+  }
+}
