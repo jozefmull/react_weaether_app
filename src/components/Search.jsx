@@ -31,6 +31,7 @@ const Search = () =>
               }),
             }
           })
+          .catch((err) => console.log(err))
       )
     }
     //handle change of an input

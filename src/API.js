@@ -13,3 +13,4 @@ export const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5'
 // API key for weather API
 export const WEATHER_API_KEY = '75815ec8b6808a5d1297da8ea703291d'
 
+

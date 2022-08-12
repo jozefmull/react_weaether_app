@@ -52,15 +52,13 @@ const ForecastWeather = () => {
     let hour = `${time.split(':')[0]}:${time.split(':')[1]}`
     let month = MONTHS[myDate.getMonth()]
 
-    console.log(myDate.getDate(), month, hour)
-
     return [myDate.getDate(), month].join('-') + ' ' + hour
   }
 
   return (
     <>
       <Accordion allowZeroExpanded>
-        {forecastWeather.list.map((item, idx) => (
+        {forecastWeather.list.slice(0, 13).map((item, idx) => (
           <AccordionItem key={idx}>
             <AccordionItemHeading>
               <AccordionItemButton>

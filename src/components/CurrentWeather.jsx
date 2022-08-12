@@ -36,7 +36,7 @@ const CurrentWeather = () => {
         <img
           alt='weather-icon'
           className={styles.weather_icon}
-          src={`icons/${weather[0].icon}.png`}
+          src={`/icons/${weather[0].icon}.png`}
         />
       </div>
       <div className={styles.bottom}>

@@ -13,7 +13,7 @@ const MainOptions = () => {
     if (searchData) {
       getWeather(searchData)
     }
-    //react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [units])
 
   const handleClick = (e) => {
