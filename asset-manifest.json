@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react_weaether_app/static/css/main.f337ab95.css",
+    "main.css": "/react_weaether_app/static/css/main.7260a1da.css",
     "main.js": "/react_weaether_app/static/js/main.6cf2893a.js",
     "static/js/787.d9312eb8.chunk.js": "/react_weaether_app/static/js/787.d9312eb8.chunk.js",
     "index.html": "/react_weaether_app/index.html",
-    "main.f337ab95.css.map": "/react_weaether_app/static/css/main.f337ab95.css.map",
+    "main.7260a1da.css.map": "/react_weaether_app/static/css/main.7260a1da.css.map",
     "main.6cf2893a.js.map": "/react_weaether_app/static/js/main.6cf2893a.js.map",
     "787.d9312eb8.chunk.js.map": "/react_weaether_app/static/js/787.d9312eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f337ab95.css",
+    "static/css/main.7260a1da.css",
     "static/js/main.6cf2893a.js"
   ]
 }
