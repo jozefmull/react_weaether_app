@@ -12,37 +12,15 @@ code {
 /*
 * CHART
 */
-#root
-  > div
-  > div:nth-child(2)
-  > div:nth-child(1)
-  > div.chart_container
-  > div.recharts-wrapper,
-#root
-  > div
-  > div:nth-child(2)
-  > div:nth-child(1)
-  > div.chart_container
-  > div.recharts-wrapper
-  > svg {
+div.recharts-wrapper,
+div.recharts-wrapper > svg {
   width: 100% !important;
   height: 300px !important;
 }
 
 @media only screen and (max-width: 560px) {
-  #root
-    > div
-    > div:nth-child(2)
-    > div:nth-child(1)
-    > div.chart_container
-    > div.recharts-wrapper,
-  #root
-    > div
-    > div:nth-child(2)
-    > div:nth-child(1)
-    > div.chart_container
-    > div.recharts-wrapper
-    > svg {
+  div.recharts-wrapper,
+  div.recharts-wrapper > svg {
     height: 100% !important;
   }
 }
