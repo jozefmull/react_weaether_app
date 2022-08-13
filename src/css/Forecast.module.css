@@ -69,6 +69,11 @@
 .daily_details_grid_item label:last-child {
   color: #48484a;
 }
+.daily_details_grid_item label svg {
+  width: 12px;
+  position: relative;
+  left: 2px;
+}
 
 .daily_item > svg {
   margin-left: 5px;

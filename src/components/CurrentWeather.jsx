@@ -6,7 +6,8 @@ import styles from '../css/CurrentWeather.module.css'
 const CurrentWeather = () => {
   const { units, currWeather, loading } = useContext(GlobalContext)
 
-  let { city, main, weather, wind, visibility, clouds, name } = currWeather
+  let { city, main, weather, wind, visibility, clouds, name, rain, snow } =
+    currWeather
 
   const [tempUnits, settempUnits] = useState('°C')
   const [windUnits, setwindUnits] = useState('m/s')
@@ -65,6 +66,15 @@ const CurrentWeather = () => {
               </svg>
             </span>
           </div>
+          {wind.gust !== 0 && (
+            <div className={styles.parameter_row}>
+              <span className={styles.parameter_label}>Gust: </span>
+              <span className={styles.parameter_value}>
+                {wind.gust} {windUnits}
+              </span>
+            </div>
+          )}
+
           <div className={styles.parameter_row}>
             <span className={styles.parameter_label}>Humidity: </span>
             <span className={styles.parameter_value}>{main.humidity} %</span>
@@ -85,6 +95,22 @@ const CurrentWeather = () => {
               {Number(clouds.all)} %
             </span>
           </div>
+          {rain && rain.hasOwnProperty('1h') && (
+            <div className={styles.parameter_row}>
+              <span className={styles.parameter_label}>Rain: </span>
+              <span className={styles.parameter_value}>
+                {Number(rain['1h'])} mm
+              </span>
+            </div>
+          )}
+          {snow && snow.hasOwnProperty('1h') && (
+            <div className={styles.parameter_row}>
+              <span className={styles.parameter_label}>Snow: </span>
+              <span className={styles.parameter_value}>
+                {Number(snow['1h'])} mm
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>

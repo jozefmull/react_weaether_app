@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/logo512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -10,34 +10,57 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Weather</title>
+    <style>  
+      .loader-wrapper {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #d5d4d4;
+        display: grid;
+        place-items: center;
+      }
+  
+      .loader svg{
+        animation: spin 2s linear infinite;
+        transform-origin: center center;
+      }
+  
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg) scale(0.9);
+        }
+        100% {
+          transform: rotate(360deg) scale(1.1);
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="root">
+      <div class="loader-wrapper">
+        <div class="loader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" fill="none">
+            <path d="M139.662 95.1403C139.662 118.832 120.392 138.076 96.5749 138.076C72.7575 138.076 53.488 118.832 53.488 95.1403C53.488 71.4486 72.7575 52.2045 96.5749 52.2045C120.392 52.2045 139.662 71.4486 139.662 95.1403Z" stroke="#F6A71C" stroke-width="15"/>
+            <mask id="path-2-inside-1_1_13" fill="white">
+            <path d="M90.2515 6.61078C90.2515 2.95975 93.2112 0 96.8623 0V0C100.513 0 103.473 2.95975 103.473 6.61078V27.7773C103.473 31.4283 100.513 34.3881 96.8623 34.3881V34.3881C93.2112 34.3881 90.2515 31.4283 90.2515 27.7773V6.61078Z"/>
+            </mask>
+            <path d="M90.2515 6.61078C90.2515 2.95975 93.2112 0 96.8623 0V0C100.513 0 103.473 2.95975 103.473 6.61078V27.7773C103.473 31.4283 100.513 34.3881 96.8623 34.3881V34.3881C93.2112 34.3881 90.2515 31.4283 90.2515 27.7773V6.61078Z" fill="#F6A71C"/>
+            <path d="M83.4731 6.61078V27.7773H123.473V6.61078H83.4731ZM110.251 27.7773V6.61078H70.2515V27.7773H110.251ZM96.8623 14.3881C104.257 14.3881 110.251 20.3826 110.251 27.7773H70.2515C70.2515 42.474 82.1655 54.3881 96.8623 54.3881V14.3881ZM83.4731 27.7773C83.4731 20.3826 89.4676 14.3881 96.8623 14.3881V54.3881C111.559 54.3881 123.473 42.474 123.473 27.7773H83.4731ZM96.8623 20C89.4676 20 83.4731 14.0054 83.4731 6.61078H123.473C123.473 -8.08595 111.559 -20 96.8623 -20V20ZM96.8623 -20C82.1655 -20 70.2515 -8.08594 70.2515 6.61078H110.251C110.251 14.0054 104.257 20 96.8623 20V-20Z" fill="#F6A71C" mask="url(#path-2-inside-1_1_13)"/>
+            <rect x="4.67453" width="6.60092" height="27.8387" rx="3.30046" transform="matrix(0.708163 -0.706049 0.708163 0.706049 24.3582 34.9738)" fill="#F6A71C" stroke="#F6A71C" stroke-width="6.60092"/>
+            <rect x="3.29552" y="98.7224" width="6.59104" height="27.9" rx="3.29552" transform="rotate(-90 3.29552 98.7224)" fill="#F6A71C" stroke="#F6A71C" stroke-width="6.59104"/>
+            <rect y="-4.66057" width="6.60092" height="27.8387" rx="3.30046" transform="matrix(-0.708163 -0.706049 0.708163 -0.706049 36.2184 162.665)" fill="#F6A71C" stroke="#F6A71C" stroke-width="6.60092"/>
+            <rect x="4.67453" width="6.60092" height="27.8387" rx="3.30046" transform="matrix(0.708163 -0.706049 0.708163 0.706049 139.328 147.881)" fill="#F6A71C" stroke="#F6A71C" stroke-width="6.60092"/>
+            <rect x="94.1317" y="160.917" width="6.61078" height="27.7773" rx="3.30539" fill="#F6A71C" stroke="#F6A71C" stroke-width="6.61078"/>
+            <rect x="188.704" y="92.1313" width="6.59104" height="27.9" rx="3.29552" transform="rotate(90 188.704 92.1313)" fill="#F6A71C" stroke="#F6A71C" stroke-width="6.59104"/>
+            <rect y="4.66057" width="6.60092" height="27.8387" rx="3.30046" transform="matrix(0.708163 0.706049 -0.708163 0.706049 165.247 23.7222)" fill="#F6A71C" stroke="#F6A71C" stroke-width="6.60092"/>
+            </svg>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -26,8 +26,7 @@
 }
 .bottom p {
   font-size: 36px;
-  font-weight: 100;
-  margin-right: 8pt;
+  font-weight: 100 !important;
   margin: 0;
 }
 .bottom span {
@@ -54,13 +53,13 @@
   text-align: left;
   font-size: 12px;
   color: #48484a;
-  font-weight: 400;
+  font-weight: 300 !important;
 }
 .parameter_value {
   text-align: right;
   font-size: 12px;
   color: #48484a;
-  font-weight: 400;
+  font-weight: 300 !important;
 }
 .parameter_label.top {
   border-bottom: 1px solid #fff;

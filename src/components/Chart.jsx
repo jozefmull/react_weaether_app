@@ -25,6 +25,7 @@ const Chart = () => {
       }`,
       temp: item.main.temp,
       rain: item.rain ? item.rain['3h'] : 0,
+      prob: item.pop ? item.pop * 100 : 0,
     })
   })
 
@@ -61,11 +62,11 @@ const Chart = () => {
       <Tooltip />
       <Bar
         radius={[3, 3, 0, 0]}
-        dataKey='rain'
+        dataKey='prob'
         barSize={20}
         fill='#88d1c6'
         yAxisId='left'
-        name='Rain'
+        name='Percip'
         opacity={0.7}
       />
       <Line
@@ -93,7 +94,7 @@ const Chart = () => {
         orientation='right'
         stroke='#88d1c6'
         axisLine={{ stroke: 'transparent' }}
-        unit=' mm'
+        unit=' %'
         style={{ fontSize: '12px' }}
         tickCount={4}
       />
